@@ -63,7 +63,12 @@ This project combines multiple data sources to build a rich, time-series dataset
 - Correlation plot
 - Scatter plots against PM2.5
 - Line graph of PM2.5 against time
+- Individual distributions of features
 - These analyses guided feature engineering decisions.
+
+<img width="601" height="233" alt="Screenshot 2025-12-18 at 17 20 37" src="https://github.com/user-attachments/assets/f420a967-de5e-4cf3-b665-b3cb04d26306" />
+<img width="601" height="240" alt="Screenshot 2025-12-18 at 17 20 46" src="https://github.com/user-attachments/assets/56fd2d86-f669-4643-919b-ace6ff512dff" />
+
 
 **Feature engineering**
 - Feature interactions (temp_avg x precip, temp_min x wind_speed, etc).
