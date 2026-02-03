@@ -110,3 +110,8 @@ Tree-based models (Random Forest, LightGBM, and XGBoost) significantly outperfor
 - Include traffic, industrial activity, or holidays as additional features.
 - Expand the range of the system to support multiple cities and spatial forecasting.
 - Deploy the model as a light web application or API for public access.
+
+## References
+* **[Air pollution prediction using LSTM deep learning and metaheuristics algorithms](https://doi.org/10.1016/j.measen.2022.100546)** *Ghufran Isam Drewil & Riyadh Jabbar Al-Bahadili (2022)*
+* **[Air pollution prediction using machine learning techniques – An approach to replace existing monitoring stations with virtual monitoring stations](https://doi.org/10.1016/j.atmosenv.2023.119987)** *A. Samad, S. Garuda, U. Vogt, & B. Yang (2023)*
+* **[Forecasting Air Pollution Particulate Matter (PM2.5) Using Machine Learning Regression Models](https://doi.org/10.1016/j.procs.2020.04.221)** *Doreswamy, Harishkumar K. S., Yogesh K. M., & Ibrahim Gad (2020)*
