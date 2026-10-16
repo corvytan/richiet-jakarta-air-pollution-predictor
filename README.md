@@ -94,7 +94,7 @@ This project combines multiple data sources to build a rich, time-series dataset
 |-------------------|:-----:|:-------:|:-----:|:-----:|
 | Linear Regression | 43.85 | 1922.71 | 38.18 | -2.36 |
 | Random Forest     | 24.68 | 609.19  | 19.02 | -0.07 |
-| LGBM              | 22.73 | 516.77  | 17.09 | 0.10  |
+| LGBM              | 22.59 | 510.22  | 17.09 | 0.10  |
 | XGBoost           | 22.64 | 512.73  | 17.36 | 0.10  |
 | Neural Net        | 28.88 | 834.14  | 23.59 | -0.46 |
 
