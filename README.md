@@ -1,11 +1,11 @@
 # Jakarta-Air-Pollution-Predictor
-_Predicting Jakarta’s PM2.5 air pollution up to 7 days ahead using machine learning and weather forecasts._
+_Predicting daily Jakarta PM2.5 concentration using machine learning and forecast weather variables._
 
 ## Background
 Jakarta frequently experiences PM2.5 levels exceeding WHO guidelines, posing serious health risks. Despite this, accessible short-term air quality forecasting tools remain limited. This project applies machine learning to anticipate pollution spikes before they occur.
 
 ## Objective / Goal:
-Build a machine-learning model to predict Jakarta’s PM2.5 levels up to 7 days ahead using only upcoming weather forecasts, enabling early warnings and better planning.
+Build a machine-learning model to predict Jakarta’s daily PM2.5 concentration. Historical weather observations are used for training, while Open-Meteo forecast weather variables are used to generate future predictions for up to seven days.
 
 ## Tools & Technologies
 - Google Colab
@@ -85,6 +85,13 @@ This project combines multiple data sources to build a rich, time-series dataset
   4. XGBoost Regressor
   5. Feedforward Neural Network (MLP)
 - Random Forest, LGBM, XGBoost, and Neural Net parameters tuned using a mix of RandomSearchCV and GridSearchCV.
+- Feature engineering improved the untuned models, but the tuned models achieved slightly lower RMSE without the additional engineered features. Final model selection was therefore based on held-out test RMSE rather than the number of features used.
+
+**Evaluation protocol**
+- The data was split chronologically, using the first 90% for training and the final 10% as a held-out test set.
+- RMSE was calculated only on the held-out test set.
+- A validation split within the training data was used for early stopping during XGBoost and LightGBM training.
+- The reported RMSE represents daily held-out prediction performance, not a separately measured seven-day-ahead forecasting error.
 
 ## Project Workflow Diagram:
 <img width="1161" height="231" alt="Jakarta Pollution Predictor Workflow drawio (2)" src="https://github.com/user-attachments/assets/6ba73453-ceed-4a38-9b07-b4e1b0775a72" />
@@ -103,7 +110,7 @@ Tree-based models (Random Forest, LightGBM, and XGBoost) significantly outperfor
 ## Conclusions & Key Takeaways: 
 - Tree-based models significantly outperform linear regression for PM2.5 prediction.
 - Weather variables exhibit strong non-linear relationships with air pollution.
-- XGBoost achieved the best overall performance on this dataset.
+- LightGBM achieved the lowest held-out test RMSE.
 - Neural networks were less effective, likely due to limited data and high noise.
 
 ## Future Work
